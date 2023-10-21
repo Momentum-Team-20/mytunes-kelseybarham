@@ -13,16 +13,22 @@
   <!-- Header format -->
   <header><h1>MyTunes Music Directory</h1></header>
   <!-- Music player div here-->
-  <div class="music-player-container">music player</div>
+  <section id="music-player">
+<!-- audio player will go here-->
+  </section>
+
   <!-- Search bar -->
-    <div class="search-bar">
-      <label for="search-element">Search for Artists</label>
-      <input type="search" id="search">
-      <button type="button" id="searchButton">Search</button>
-    </div>
+  <section id="searchBarBox">
+  <form id ="searchBar" method="get">
+      <input id="user-input" type="text" id="userSearchData">
+      <button id="searchButton" type="submit">Search</button>
+  </form>
+  </section>
+
+    <!-- Search results -->
     <h2>Search Results:</h2>
-    <div id="search-results">
-  </div>
+    <section id="searchResultsDisplaySection">
+    </section>
   
 
 </body>

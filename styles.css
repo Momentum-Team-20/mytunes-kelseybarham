@@ -1,4 +1,20 @@
 * {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: lightgrey;
 }
 
+header {
+    text-align: center;
+}
+
+#searchResultsDisplaySection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#musicResults {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
