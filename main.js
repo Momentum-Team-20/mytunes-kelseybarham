@@ -1,6 +1,8 @@
 let searchButton = document.querySelector('#searchButton')
 let searchForm = document.querySelector('#searchBar')
 let songContainer = document.querySelector('#searchResultsDisplaySection')
+let audioPlayer = document.querySelector('.audioPlayer')
+console.log(audioPlayer)
 
 
 
@@ -52,6 +54,21 @@ function buildDisplay(musicArray) {
         artistName.classList.add('artist-name')
         artistName.innerText = `${song.artistName}`
         songBox.appendChild(artistName)
+        
+        //play button
+        let playButton = document.createElement('button')
+        playButton.classList.add('playButton')
+        playButton.innerText = 'Preview Song'
+        songBox.appendChild(playButton)
+
+        //make song play
+        playButton.addEventListener('click', () => {
+            console.log(song, "song")
+            console.log(audioPlayer)
+           audioPlayer.src = song.previewUrl
+        })
+
+        //final step
         songContainer.appendChild(songBox)
 
     }
