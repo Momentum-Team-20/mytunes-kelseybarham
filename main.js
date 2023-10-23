@@ -11,7 +11,8 @@ console.log(audioPlayer)
 
 
 
-searchForm.addEventListener('submit', () => {
+searchForm.addEventListener('submit', (evt) => {
+    evt.preventDefault();
     let userInput = document.querySelector('#user-input')
     console.log(userInput.value)
     fetch(`https://proxy-itunes-api.glitch.me/search?term=${userInput.value}&entity=song`)
