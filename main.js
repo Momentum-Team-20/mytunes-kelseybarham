@@ -20,14 +20,15 @@ searchForm.addEventListener('submit', (evt) => {
     console.log(response)
     return response.json()
 }).then((data) => {
+    //we are consoling logging all of the data from the fetch request to iTunes 
     console.log(data)
-    //helpful understanding with how the console.log works:
-    // console.log(data)
-    // console.log(data.results)
-    // console.log(data.results[0])
-    // console.log(data.results[0].artistName)
+    if (data.resultCount === 0) {
+        alert("Nothing here, Pal!");
+        //here's where you could build a function to create a 404 img in Search Results
+    }
+   else {
     buildDisplay(data.results)
-}
+   }}
 )
 }) 
 
@@ -80,3 +81,9 @@ function buildDisplay(musicArray) {
 
 
 // madonna example 'https://itunes.apple.com/search?term=madonna&entity=song'
+
+ //helpful understanding with how the console.log works:
+    // console.log(data)
+    // console.log(data.results)
+    // console.log(data.results[0])
+    // console.log(data.results[0].artistName)
